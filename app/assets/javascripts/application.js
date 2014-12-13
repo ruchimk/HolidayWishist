@@ -12,5 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery_serialize_object
+//= require underscore
+//= require backbone
 //= require turbolinks
 //= require_tree .
+
+
