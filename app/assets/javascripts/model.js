@@ -3,8 +3,7 @@ var Item = Backbone.Model.extend({
     title: '',
     descripition: '',
     image_url: '',
-    url: '',
-    created_at: ''
+    url: ''
   }
 });
 
