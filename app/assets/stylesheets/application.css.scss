@@ -16,15 +16,34 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import url(http://fonts.googleapis.com/css?family=Croissant+One);
 
-body, html {
-  background-color: #b2e5e5;
-  min-height: 100vh;
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+body {
+    background: #a2cade;
 }
 
-// body {
-//   background: #E9E9E9;
-// }
+#snowglobe {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+#snowglobe .flake {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    color: rgba(255,255,255,0);
+    text-shadow: 0 0 3px rgba(255,255,255,1);
+}​
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 100;

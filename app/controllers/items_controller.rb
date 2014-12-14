@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :find_item, only: [:show, :edit, :update, :destroy]
- before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show]
   # GET /items
   # GET /items.json
   def index
@@ -14,7 +14,8 @@ class ItemsController < ApplicationController
 
   # GET /items/new
   def new
-    @item = current_user.items.build
+    # @item = current_user.items.build
+    @item = Item.new
   end
 
   # GET /items/1/edit
@@ -24,7 +25,8 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-    @item = current_user.items.build(item_params)
+    @item = Item.new(item_params)
+    # @item = current_user.items.build(item_params)
 
     respond_to do |format|
       if @item.save
@@ -62,13 +64,13 @@ class ItemsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def find_item
-      @item = Item.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def find_item
+    @item = Item.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def item_params
-      params.require(:item).permit(:title, :description, :image_url, :url)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def item_params
+    params.require(:item).permit(:title, :description, :image_url, :url)
+  end
 end
