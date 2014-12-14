@@ -4,28 +4,27 @@
       <div class="panel-heading pin_image">
         <%= image_tag @item.image_url %>
       </div>
-  <div class="panel-body">
-    <h1><%= @item.title %></h1>
-    <p class="description"><%= @item.description %></p>
-  </div>
-</div>
-</div>
-  <div class="panel-footer">
-    <div class="row">
-      <div class="col-md-6">
-        <p class="user">
-          Submitted by:  @item.user.email
-        </p>
+      <div class="panel-body">
+        <h1><%= @item.title %></h1>
+        <p class="description"><%= @item.description %></p>
+      </div>
+      <div class="panel-footer">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="user">
+                   Submitted by:  @item.current_user.email
+                </p>
+            </div>
+            <div class="col-md-6">
+                  <div class="btn-group pull-right">
+                    <p class="btn btn-default"><%= link_to 'Edit', edit_item_path(@item) %></p>
+                    <p class="btn btn-default"><%= link_to 'Back', items_path %></p>
+                    <p class="btn btn-default"><%= link_to 'Delete', item_path, method: :delete, data: {confirm: "Are you sure?"} %></p>
+                  </div>
+              </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-md-6">
-    <div class="btn-group pull-right">
-     <p class="btn btn-default"><%= link_to 'Edit', edit_item_path(@item) %></p>
-     <p class="btn btn-default"><%= link_to 'Back', items_path %></p>
-    </div>
-  </div>
-</div>
 
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>

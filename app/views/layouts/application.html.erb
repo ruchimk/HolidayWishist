@@ -16,9 +16,10 @@
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
+
 <div id="snowglobe">
 </div>
-<p class="navbar">
+
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
@@ -35,8 +36,8 @@
     </div>
   </div>
 
-<script>
-   //////
+  <script>
+
 // snowflake animation from:http://sutherlandboswell.com/2012/11/creating-pretty-snow-with-javascript-html-css/
 
 function getWidth() {
@@ -70,7 +71,6 @@ function getHeight() {
 function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
 
 var width = getWidth();
 var height = getHeight();
@@ -124,8 +124,11 @@ setInterval(doAnimation, 10);
 window.onresize = function(event) {
     width = getWidth();
     height = getHeight();
-  }
+  }();
+
 </script>
+
 <%= yield %>
+
 </body>
 </html>
