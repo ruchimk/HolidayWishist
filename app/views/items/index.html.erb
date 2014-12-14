@@ -1,19 +1,11 @@
-<div class =></div>
-  <tbody>
+<div class=".col-md-6.col-md-offset-3">
+
     <% @items.each do |item| %>
-      <tr>
-        <td><%= item.title %></td>
-        <td><%= item.description %></td>
-        <td><%= item.image_url %></td>
-        <td><%= item.url %></td>
-        <td><%= item.user_id %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <h2><%= link_to item.title, item %></h2>
+        <h2><%= image_tag item.image_url %></h2>
     <% end %>
-  </tbody>
-</table>
+
+</div>
 
 <br>
 
