@@ -15,7 +15,8 @@
 //= require jquery_serialize_object
 //= require underscore
 //= require backbone
+//= require snowfallTwo
 //= require turbolinks
 //= require_tree .
 
-
+$("body").snowfall({flakeCount : 100, maxSpeed : 10});
