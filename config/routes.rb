@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :items
 
-  root to: "home#index"
+  root to: "items#index"
   post '/', to: 'items#create'
   resources :friendships
 
