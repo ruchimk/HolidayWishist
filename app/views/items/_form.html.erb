@@ -1,8 +1,7 @@
-<%= form_for(@item) do |f| %>
+<%= simple_form_for @item, html: {multipart:true} do |f| %>
   <% if @item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
-
       <ul>
       <% @item.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,23 +10,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="form-group">
+    <%= f.input :title, input_html: { class: 'form-control'} %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+  <div class="form-group">
+     <%= f.input :description, input_html: { class: 'form-control'} %>
   </div>
-  <div class="field">
-    <%= f.label :image_url %><br>
-    <%= f.text_area :image_url %>
+  <div class="form-group">
+  <%= f.input :image_url, input_html: { class: 'form-control'} %>
   </div>
-  <div class="field">
-    <%= f.label :url %><br>
-    <%= f.text_area :url %>
+  <div class="form-group">
+   <%= f.input :url, input_html: { class: 'form-control'} %>
   </div>
-  <div class="actions">
+  <div class="btn btn-primary">
     <%= f.submit %>
   </div>
 <% end %>

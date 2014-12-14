@@ -16,6 +16,7 @@
 //= require underscore
 //= require backbone
 //= require snowfallTwo
+//= require masonry/jquery.masonry
 //= require turbolinks
 //= require_tree .
 

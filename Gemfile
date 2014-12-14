@@ -30,6 +30,8 @@ gem 'devise'
 gem 'rails_12factor', group: :production
 gem 'pry-rails', :group => :development
 gem 'bootstrap-sass'
+gem 'masonry-rails', '~> 0.2.4'
+gem 'simple_form', '~> 3.1.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

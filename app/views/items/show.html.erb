@@ -1,24 +1,33 @@
-<p id="notice"><%= notice %></p>
+<div id="item_show" class="row">
+  <div class="col-md-8 md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading pin_image">
+        <%= image_tag @item.image_url %>
+      </div>
+  <div class="panel-body">
+    <h1><%= @item.title %></h1>
+    <p class="description"><%= @item.description %></p>
+  </div>
+</div>
+</div>
+  <div class="panel-footer">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="user">
+          Submitted by:  @item.user.email
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="btn-group pull-right">
+     <p class="btn btn-default"><%= link_to 'Edit', edit_item_path(@item) %></p>
+     <p class="btn btn-default"><%= link_to 'Back', items_path %></p>
+    </div>
+  </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @item.title %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @item.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= image_tag @item.image_url %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @item.url %>
-</p>
+</div>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
