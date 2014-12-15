@@ -38,6 +38,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'spring-commands-rspec'
+  gem 'jasmine-rails'
 end
 
 group :test do
@@ -58,4 +59,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-

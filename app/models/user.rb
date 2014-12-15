@@ -6,18 +6,20 @@ class User < ActiveRecord::Base
 
   has_many :items
 
-  has_many :friendships
+  has_many :friendships, {dependent: :destroy}
   has_many :friends, :through => :friendships
 
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
   has_many :inverse_friends, :through => :inverse_friendships, :source => :user
 
   def not_friends
-    already_friends_ids = self.friends.map {|friend| friend.id }
-    not_friends = []
-    User.all.each do |user|
-      not_friends << user unless already_friends_ids.include?(user.id) || self.id == user.id
+    # User.all - self.friends - [self]
+    already_friends_ids = self.friend_ids
+    User.all.reject do |user|
+      already_friends_ids.include?(user.id) || self.id == user.id
     end
-    not_friends
   end
+
+
 end
+

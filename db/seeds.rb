@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+rand(1..20).times { FactoryGirl.create(:user) }
+
+rand(1..20).times { FactoryGirl.create(:item) }
