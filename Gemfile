@@ -33,6 +33,7 @@ gem 'bootstrap-sass'
 gem 'masonry-rails', '~> 0.2.4'
 gem 'simple_form', '~> 3.1.0'
 gem 'awesome_print', '~> 1.2.0'
+gem "rb-readline", :require => false
 gem 'factory_girl', '~> 4.5.0'
 gem 'ffaker', '~> 1.25.0'
 gem 'capybara', '~> 2.4.4'

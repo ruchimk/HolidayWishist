@@ -1,8 +1,9 @@
-<div class="myfriends"><h2>My Friends</h2>
+<div class="myfriends">
+  <h2>My Friends</h2>
 <ul>
   <% current_user.friends do |friendship| %>
   <li>
-    <%=h friendship.friend.email %>
+    <%= friendship.friend.email %>
     (<%= link_to "remove", friendship, :method => :delete %>)
   </li>
   <% end %>
