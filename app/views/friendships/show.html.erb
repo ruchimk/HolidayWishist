@@ -4,8 +4,14 @@
     <% @friendships.each do |friendship| %>
     <li>
       <%= friendship.email %>
-      (<%= link_to "remove", friendship, :method => :delete %>)
+      (<%= link_to "remove", friendship_path, :method => :delete %>)
     </li>
+    <% end %>
+  </ul>
+  <h2>Users Who Have Befriended You</h2>
+  <ul>
+    <% current_user.inverse_friends do |user| %>
+    <li><%=  user.email %></li>
     <% end %>
   </ul>
 </div>

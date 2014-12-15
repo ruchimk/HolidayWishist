@@ -2,4 +2,13 @@
 
 feature 'User can add friends' do
   scenario 'they see Add Friend on the index page' do
-    visit
+    visit friendships_path
+
+    click_link 'Add Friend'
+
+    expect(page).to have_css '.addfriends', 'Add Friends'
+  end
+end
+
+
+

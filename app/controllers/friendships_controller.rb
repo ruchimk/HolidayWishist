@@ -1,4 +1,5 @@
 class FriendshipsController < ApplicationController
+
   def index
     @users = current_user.not_friends
   end
