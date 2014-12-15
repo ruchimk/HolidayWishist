@@ -11,6 +11,7 @@
 
 <body>
   <div id="snowglobe">
+
     <% if notice %>
     <p class="alert alert-success"><%= notice %></p>
     <% end %>
@@ -37,13 +38,9 @@
         <%= image_tag("holiday_wishlist_banner.png")  %>
       </div>
     </div>
-
-
-
     <div class="container">
       <%= yield %>
     </div>
-  </div>
-
+</div>
 </body>
 </html>
