@@ -4,7 +4,8 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all.order("created_at DESC")
+    @items = current_user.items.order("created_at DESC") if current_user
+
   end
 
   # GET /items/1
