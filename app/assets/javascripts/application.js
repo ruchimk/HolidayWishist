@@ -56,7 +56,7 @@ function getRandom(min, max) {
 
 var width = getWidth();
 var height = getHeight();
-var flakeCount = 100;
+var flakeCount = 40;
 var gravity = 0.8;
 var windSpeed = 20;
 var flakes = [];
