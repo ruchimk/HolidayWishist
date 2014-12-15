@@ -4,7 +4,7 @@ class FriendshipsController < ApplicationController
   end
 
   def show
-    @friendship = current_user.friends
+    @friendships = current_user.friends
   end
 
   def create
