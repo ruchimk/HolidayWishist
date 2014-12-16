@@ -1,13 +1,24 @@
+require 'httparty'
+
 class ItemsController < ApplicationController
   before_action :find_item, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   # GET /items
   # GET /items.json
-  def index
-    @items = current_user.items.order("created_at DESC") if current_user
 
+  def make_api_call
+    render json: make_call
   end
 
+
+  def index
+    @items = current_user.items.order("created_at DESC") if current_user
+  end
+
+  def friends_items
+    @friends_items = Item.friends_items(current_user)
+    render 'index'
+  end
   # GET /items/1
   # GET /items/1.json
   def show
@@ -52,6 +63,7 @@ class ItemsController < ApplicationController
     end
   end
 
+
   # DELETE /items/1
   # DELETE /items/1.json
   def destroy
@@ -62,6 +74,7 @@ class ItemsController < ApplicationController
     end
   end
 
+
   private
   # Use callbacks to share common setup or constraints between actions.
   def find_item
@@ -71,5 +84,9 @@ class ItemsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def item_params
     params.require(:item).permit(:title, :description, :image_url, :url)
+  end
+
+  def make_call
+    HTTParty.get("https://openapi.etsy.com/v2/listings/active?api_key=mi7mse8bmftparcsqwsyassi&category=accessories")
   end
 end
