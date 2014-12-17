@@ -49,8 +49,6 @@ group :test do
 end
 
 gem 'httparty', '~> 0.13.3'
-
-gem 'etsy', '~> 0.3.0'
 gem 'json', '~> 1.8.1'
 
 gem 'figaro'
