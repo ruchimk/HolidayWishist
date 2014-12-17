@@ -13,7 +13,7 @@
     <th># of Items</th>
   </thead>
   <tbody>
-    <% @searches.each do |search| %>
+    <% @cat_list.each do |search| %>
     <tr>
       <td><%= link_to search.name, search %></td>
       <td><%= search.description  %></td>
@@ -25,7 +25,7 @@
 
 <br>
 <br>
-<%= form_for Search.new do |f| %>
+<%= form_for Item.new do |f| %>
 <%= f.label :name  %>
 <%= f.text_field :name %>
 <%= f.label :description %>
