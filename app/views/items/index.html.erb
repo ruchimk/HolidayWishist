@@ -1,16 +1,21 @@
+<% flash.each do |key, value| %>
+<%= content_tag :div, value, class: "flash #{key}" %>
+<% end %>
+
 <% if current_user %>
 <div id="items" class=“transitions-enabled”>
-    <% @items.each do |item| %>
-    <div class="box panel panel-default">
-        <h2><%= image_tag item.image_url %></h2>
+  <% @items.each do |item| %>
+  <div class="box panel panel-default">
+    <h2><%= image_tag item.image_url %></h2>
     <div class="panel-body">
       <h2><%= link_to item.title, item %></h2>
-      <p class="user">Submitted by: <%= item.user.email %> </p>
+      <p class="user">Submitted by: <%= item.user.name %> </p>
     </div>
-     <% end %>
   </div>
+  <% end %>
 </div>
 <% end %>
+
 
 
 

@@ -1,3 +1,18 @@
-<% @items.each do |item| %>
-<img src="<%= item.image_url %>">
-<% end %>
+<div id="items-container" class="items-app">
+  <noscript>
+    <p>Sorry, this application requires JavaScript.</p>
+  </noscript>
+  <form class="create_item">
+    <input type="title" name="title" placeholder="Name of Item">
+    <input type="image_url" name="image_url" placeholder="Image Url">
+    <input type="url" name="url" placeholder="URL Link to Item">
+    <button>Add Item</button>
+</form>
+</div>
+<script type="template" id="items-list">
+  <%= render 'list_template' %>
+</script>
+
+<script type="template" id="item-detail">
+  <%= render 'detail_template' %>
+</script>

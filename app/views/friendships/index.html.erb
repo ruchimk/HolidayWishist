@@ -1,11 +1,17 @@
 <div class="addfriend">
-<h2>Add Friends</h2>
-<% @users.each do |user| %>
-  <div class="user">
-    <ul>
-     <p><%= user.email %></p>
-     <li><%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %></li>
-    </ul>
-  </div>
-<% end %>
+  <h2>Add Friends</h2>
+  <%= form_for @friendship do |f| %>
+  <div class="field">
+   <%= f.label 'Users of Holiday Wishlist' %> <br>
+   <%= f.collection_select :friend_id, @users, :id, :email %>
+ </div>
+ <div class="actions">
+   <%= f.submit 'Add Friend' %>
+ </div>
+ <% end %>
 </div>
+
+
+
+
+

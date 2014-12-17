@@ -1,28 +1,8 @@
-<%= simple_form_for @item, html: {multipart:true} do |f| %>
-  <% if @item.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
-      <ul>
-      <% @item.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="form-group">
-    <%= f.input :title, input_html: { class: 'form-control'} %>
-  </div>
-  <div class="form-group">
-     <%= f.input :description, input_html: { class: 'form-control'} %>
-  </div>
-  <div class="form-group">
-  <%= f.input :image_url, input_html: { class: 'form-control'} %>
-  </div>
-  <div class="form-group">
-   <%= f.input :url, input_html: { class: 'form-control'} %>
-  </div>
-  <div class="btn btn-primary">
-    <%= f.submit %>
-  </div>
+<%= form_for @item do |f| %>
+  <%= f.text_field :title, placeholder: "Item Title" %>
+  <%= f.text_field :description, placeholder: "Description" %>
+  <%= f.text_field :image_url, placeholder: "Image URL" %>
+  <%= f.text_field :url, placeholder: "URL" %>
+  <%= f.submit %>
 <% end %>
