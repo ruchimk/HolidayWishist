@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
-  mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}, controllers: { registrations: 'registrations' }
   devise_scope :user do
     get '/sign_up', to: 'devise/registrations#new'
     get 'sign_in', to: 'devise/sessions#new'
     delete 'sign_out', to: 'devise/sessions#destroy'
   end
-
-  get '/api_call', to: 'items#make_api_call'
 
   resources :items
   resources :users, only: [:show]
@@ -16,6 +13,15 @@ Rails.application.routes.draw do
 
   post '/', to: 'items#create'
   resources :friendships
+
+
+  get "/searches/", to: "searches#index",  as: 'search_results'
+
+
+
+  resources :searches do
+    resources :items # makes routes like 'wishlists/1/items', which should have a page with all the items for the wishlist with id 1
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

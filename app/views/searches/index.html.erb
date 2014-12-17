@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+      <center><div class="col-md-10 center">
+        <table class="table table-striped">
+          <thead class="text-center">
+           <th>Title</th>
+            <th>URL </th>
+            <th>Save to Wishlist </th>
+          </thead>
+          <tbody>
+          <% @found_products.each do |products_hash| %>
+            <% item_hash = {
+              title: products_hash['title'],
+              url: products_hash['url']
+             }
+            %>
+            <tr>
+              <td><%= products_hash['title'] %></td>
+              <td><%= products_hash['url'] %></td>
+              <td><%= button_to('Save for later', items_path(item: item_hash))%></td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div><center>
+  </div>
+</div>
+
+<br>
+<br>
+
+
+
+<!-- = form_for @item, url: wishlist_items_path do |f|
+  = f.hidden_field :wishlist_id, value: params[:wishlist_id]
+  = f.label "Etsy URL"
+  = f.text_field :etsy_url
+
+  = f.submit "Add Item" -->
+
+
+<br>
+<br>
+
