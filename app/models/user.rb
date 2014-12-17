@@ -20,6 +20,14 @@ class User < ActiveRecord::Base
     end
   end
 
+  # def friends_ids
+  #   friend_ids = []
+  #   friend_ids << self.friend_ids
+  # end
+
+  # def friends_items
+  #   @items.where(friends_ids)
+  # end
 
 end
 
