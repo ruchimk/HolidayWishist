@@ -9,3 +9,5 @@
 rand(1..20).times { FactoryGirl.create(:user) }
 
 rand(1..20).times { FactoryGirl.create(:item) }
+
+# rand(1..20).times { FactoryGirl.create(:friends) }
