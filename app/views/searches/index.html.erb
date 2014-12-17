@@ -1,29 +1,30 @@
-
-
-<br>
-<br>
-
-<table>
-  <thead>
-    <th>Name</th>
-    <th>Description </th>
-    <th># of Items</th>
-  </thead>
-  <tbody>
-  <% @found_products.each do |products_hash| %>
-    <% item_hash = {
-      title: products_hash['title'],
-      description: products_hash['description']
-     }
-    %>
-    <tr>
-      <td><%= products_hash['title'] %></td>
-      <td><%= button_to('Save for later', items_path(item: item_hash))%></td>
-    </tr>
-  <% end %>
-
-  </tbody>
-</table>
+<div class="container">
+  <div class="row">
+      <center><div class="col-md-10 center">
+        <table class="table table-striped">
+          <thead class="text-center">
+            <center><th>Title</th></center>
+            <th>URL </th>
+            <th>Save to Wishlist </th>
+          </thead>
+          <tbody>
+          <% @found_products.each do |products_hash| %>
+            <% item_hash = {
+              title: products_hash['title'],
+              url: products_hash['url']
+             }
+            %>
+            <tr>
+              <td><%= products_hash['title'] %></td>
+              <td><%= products_hash['url'] %></td>
+              <td><%= button_to('Save for later', items_path(item: item_hash))%></td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div><center>
+  </div>
+</div>
 
 <br>
 <br>
