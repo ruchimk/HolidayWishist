@@ -1,15 +1,6 @@
-require 'httparty'
-
 class ItemsController < ApplicationController
   before_action :find_item, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  # GET /items
-  # GET /items.json
-
-  def make_api_call
-    render json: make_call
-  end
-
 
   def index
     @items = current_user.items.order("created_at DESC") if current_user
@@ -19,22 +10,19 @@ class ItemsController < ApplicationController
     @friends_items = Item.friends_items(current_user)
     render 'index'
   end
-  # GET /items/1
-  # GET /items/1.json
+
   def show
   end
 
-  # GET /items/new
   def new
     @item = current_user.items.build
   end
 
-  # GET /items/1/edit
+
   def edit
   end
 
-  # POST /items
-  # POST /items.json
+
   def create
     @item = current_user.items.build(item_params)
 
@@ -49,8 +37,7 @@ class ItemsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /items/1
-  # PATCH/PUT /items/1.json
+
   def update
     respond_to do |format|
       if @item.update(item_params)
@@ -64,8 +51,6 @@ class ItemsController < ApplicationController
   end
 
 
-  # DELETE /items/1
-  # DELETE /items/1.json
   def destroy
     @item.destroy
     respond_to do |format|
@@ -86,7 +71,5 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:title, :description, :image_url, :url)
   end
 
-  def make_call
-    HTTParty.get("https://openapi.etsy.com/v2/listings/active?api_key=mi7mse8bmftparcsqwsyassi&category=accessories")
-  end
+
 end
