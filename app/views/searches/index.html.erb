@@ -1,8 +1,5 @@
-<h1><center>Browse Etsy Categories</center></h1><center>
 
-<% @cat_list.each do |c| %>
-<%= link_to " #{c["name"]}", "http://www.etsy.com/listing-category/#{c["name"]}", target: "_blank" %>
-<% end %>
+
 <br>
 <br>
 
@@ -13,25 +10,33 @@
     <th># of Items</th>
   </thead>
   <tbody>
-    <% @cat_list.each do |search| %>
+  <% @found_products.each do |products_hash| %>
+    <% item_hash = {
+      title: products_hash['title'],
+      description: products_hash['description']
+     }
+    %>
     <tr>
-      <td><%= link_to search.name, search %></td>
-      <td><%= search.description  %></td>
-      <td><%= search.items.count %></td>
+      <td><%= products_hash['title'] %></td>
+      <td><%= button_to('Save for later', items_path(item: item_hash))%></td>
     </tr>
-    <% end %>
+  <% end %>
+
   </tbody>
 </table>
 
 <br>
 <br>
-<%= form_for Item.new do |f| %>
-<%= f.label :name  %>
-<%= f.text_field :name %>
-<%= f.label :description %>
-<%= f.text_field :description %>
-<%= f.submit %>
-<% end %>
+
+
+
+<!-- = form_for @item, url: wishlist_items_path do |f|
+  = f.hidden_field :wishlist_id, value: params[:wishlist_id]
+  = f.label "Etsy URL"
+  = f.text_field :etsy_url
+
+  = f.submit "Add Item" -->
+
 
 <br>
 <br>

@@ -1,0 +1,15 @@
+
+  <%= form_tag searches_path, method: :get do  %>
+    <div class="field">
+      <select name="category_id" id="category">
+      <% @cat_list.each do |category| %>
+        <option value= "<%= category['category_id'] %>"><%= category[
+          'meta_title'] %></option>
+          <% end %>
+     </select>
+    </div>
+   <div class="actions">
+     <%= submit_tag 'Search' %>
+   </div>
+  <% end %>
+

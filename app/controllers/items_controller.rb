@@ -16,14 +16,10 @@ class ItemsController < ApplicationController
 
   def new
     @item = current_user.items.build
-    categories = HTTParty.get("https:///openapi.etsy.com/v2/taxonomy/categories?api_key=#{etsy_key}/")
-    @cat_list = categories["results"]
   end
-
 
   def edit
   end
-
 
   def create
     @item = current_user.items.build(item_params)
