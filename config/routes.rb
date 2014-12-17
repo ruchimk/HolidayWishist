@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   root to: "items#index"
   # root to: "home#index"
 
-  post '/', to: 'items#create'
+  # post '/', to: 'items#create'
   resources :friendships
 
   # The priority is based upon order of creation: first created -> highest priority.
