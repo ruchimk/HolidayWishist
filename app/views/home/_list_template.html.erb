@@ -1,0 +1,8 @@
+<div class="header">
+  <h1>Your Holiday Wishlist</h1>
+</div>
+<ul id="items-list" class="items-list">
+  <%% items.each(function(item) { %>
+    <li><a href="#items/<%%= item.get('image_url') %>"><%%= item.get('image_url') %></a></li>
+  <%% }) %>
+</ul>

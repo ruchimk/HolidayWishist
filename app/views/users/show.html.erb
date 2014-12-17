@@ -1,0 +1,15 @@
+<h3><%= @user.name%>'s Wishlist </h3>
+<div id="items" class=“transitions-enabled”>
+    <% @user.items.each do |item| %>
+    <div class="box panel panel-default">
+        <h2><%= image_tag item.image_url %></h2>
+    <div class="panel-body">
+      <h2><%= link_to item.title, item %></h2>
+      <p class="user">Submitted by: <%= item.user.name %> </p>
+    </div>
+     <% end %>
+  </div>
+</div>
+
+
+
