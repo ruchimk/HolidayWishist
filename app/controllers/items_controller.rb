@@ -18,10 +18,8 @@ class ItemsController < ApplicationController
     @item = current_user.items.build
   end
 
-
   def edit
   end
-
 
   def create
     @item = current_user.items.build(item_params)

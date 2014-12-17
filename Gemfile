@@ -51,6 +51,9 @@ group :test do
 end
 
 gem 'httparty', '~> 0.13.3'
+gem 'json', '~> 1.8.1'
+
+gem 'figaro'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
