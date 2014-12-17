@@ -1,8 +1,8 @@
-require 'etsy'
-require 'rubygems'
-require 'json'
-require 'net/http'
-require 'httparty'
+
+# require 'rubygems'
+# require 'json'
+# require 'net/http'
+# require 'httparty'
 
 #etsy search controller
 class SearchesController < ApplicationController
