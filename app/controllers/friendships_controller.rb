@@ -13,15 +13,6 @@ class FriendshipsController < ApplicationController
     friend = User.find(params[:friendship][:friend_id])
     current_user.friends << friend
     redirect_to root_url
-    # @friendship = current_user.friendships.build(friend_id: params[:friend_id], user_id: current_user.id)
-    # if @friendship.save
-    #   flash[:notice] = "Added friend."
-    #   redirect_to root_url
-    # else
-    #   flash[:error] = "Unable to add friend."
-    #   puts @friendship.errors.full_messages
-    #   redirect_to root_url
-    # end
   end
 
   def destroy

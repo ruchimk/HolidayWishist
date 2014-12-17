@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     delete 'sign_out', to: 'devise/sessions#destroy'
   end
 
-  get '/api_call', to: 'items#make_api_call'
+  # get '/api_call', to: 'items#make_api_call'
 
   resources :items
   resources :users, only: [:show]
@@ -16,6 +16,10 @@ Rails.application.routes.draw do
 
   post '/', to: 'items#create'
   resources :friendships
+
+  resources :searches do
+    resources :items # makes routes like 'wishlists/1/items', which should have a page with all the items for the wishlist with id 1
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
