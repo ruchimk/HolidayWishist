@@ -25,11 +25,17 @@ see [Holiday Wishlist](http://holidaywishlist.herokuapp.com/)
 * User can see all their items (collection of items) in a single page
 * User can see snowfall
 * User can edit and delete items 
+* User can search for items by categories and save the item to their favorites
 
 ----
 ## Future Goals
 * Incorporate We-Pay API so you can purchase your friends gifts right from the app
-* Incorporate Backbone to make single page app
+* Incorporate Backbone to make single page app using test driven development
+* Allow friends to make lists to play secret santa with and it will assign a secret santa to you.
+* Add more tests 
+* Add svg animation for christmas tree 
+* Add items in a grid layout and customize the grid layout--with skeleton or just bootstrap?
+
 
 ----
 ## Thanks
