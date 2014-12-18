@@ -29,15 +29,15 @@ gem 'bootstrap-sass'
 gem 'masonry-rails', '~> 0.2.4'
 gem 'simple_form', '~> 3.1.0'
 gem "rb-readline", :require => false
-gem 'factory_girl_rails', group: :production
 gem 'faker', group: :production
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+gem 'factory_girl_rails'
+
 group :development, :test do
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'spring-commands-rspec'
   gem 'jasmine-rails'
