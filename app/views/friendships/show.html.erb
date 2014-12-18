@@ -1,14 +1,12 @@
 <div class="myfriends">
   <h2>My Friends</h2>
   <ul>
-
     <% @friendships.each do |friend| %>
     <%= friend.name %>, <%= friend.email %>
     <li>
       (<%= link_to "remove", friendship_path, :method => :delete %>)
-        (<%= link_to "Show Friend's Wishlist", user_path(friend)%>)
+      (<%= link_to "Show Friend's Wishlist", user_path(friend)%>)
     </li>
-
     <% end %>
 
   </ul>
@@ -21,6 +19,4 @@
 
   </ul>
 </div>
-
-
 

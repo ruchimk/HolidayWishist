@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
-      <center><div class="col-md-10 center">
-        <table class="table table-striped">
+      <div class="col-md-10 center">
+        <table class="table table-striped table-bordered">
           <thead class="text-center">
            <th>Title</th>
             <th>URL </th>
@@ -17,12 +17,12 @@
             <tr>
               <td><%= products_hash['title'] %></td>
               <td><%= products_hash['url'] %></td>
-              <td><%= button_to('Save for later', items_path(item: item_hash))%></td>
+              <td><%= button_to('Save', items_path(item: item_hash))%></td>
             </tr>
           <% end %>
           </tbody>
         </table>
-      </div><center>
+      </div>
   </div>
 </div>
 

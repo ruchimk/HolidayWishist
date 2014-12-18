@@ -19,14 +19,6 @@
  @import url(http://fonts.googleapis.com/css?family=Croissant+One);
 
 
-// .center-block {
-//   display: block;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-
-
-
  html, body {
   margin: 0;
   padding: 0;
@@ -37,21 +29,8 @@ body {
   background: #a2cade;
 }
 
-
 h1, h2 {
   text-align: center;
-}
-
-.table td {
-   text-align: center;
-}
-
-.vertical-center {
-  // min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  // min-height: 100vh; /* These two lines are counted as one :-)       */
-
-  // display: flex;
-  // align-items: center;
 }
 
 ul {
@@ -59,7 +38,37 @@ ul {
 }
 
 
-.devise_forms, .addfriend, .myfriends {
+.table td {
+   text-align: center;
+}
+
+.welcome_message {
+padding: 40px;
+border-radius: 10px 10px 10px 10px;
+background: #e2e2e2;
+background: -moz-linear-gradient(left, #e2e2e2 0%, #d1d1d1 30%, #dbdbdb 61%, #fefefe 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, #e2e2e2), color-stop(30%, #d1d1d1), color-stop(61%, #dbdbdb), color-stop(100%, #fefefe));
+background: -webkit-linear-gradient(left, #e2e2e2 0%, #d1d1d1 30%, #dbdbdb 61%, #fefefe 100%);
+background: -o-linear-gradient(left, #e2e2e2 0%, #d1d1d1 30%, #dbdbdb 61%, #fefefe 100%);
+background: -ms-linear-gradient(left, #e2e2e2 0%, #d1d1d1 30%, #dbdbdb 61%, #fefefe 100%);
+background: linear-gradient(to right, #e2e2e2 0%, #d1d1d1 30%, #dbdbdb 61%, #fefefe 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1 );
+}
+
+.welcome_message p, li, ul{
+  font-family: 'Lobster Two', cursive;
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  list-style-type: circle;
+}
+
+.navbar-brand {
+  color: red;
+  font-weight: bold;
+}
+
+.devise_forms, .addfriend, .myfriends, .newetsysearch {
   border-radius: 200px 200px 200px 200px;
   -moz-border-radius: 200px 200px 200px 200px;
   -webkit-border-radius: 200px 200px 200px 200px;
