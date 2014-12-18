@@ -55,7 +55,7 @@ background: linear-gradient(to right, #e2e2e2 0%, #d1d1d1 30%, #dbdbdb 61%, #fef
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1 );
 }
 
-.welcome_message p, li, ul{
+.welcome_message p, ol {
   font-family: 'Lobster Two', cursive;
   color: red;
   font-size: 18px;
