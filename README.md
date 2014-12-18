@@ -16,6 +16,7 @@ see [Holiday Wishlist](http://holidaywishlist.herokuapp.com/)
 6. Etsy API Integration
 7. Faker and Factory girl to seed data
 8. RSPEC for some unit testing
+9. Vanilla JS for snowfall
 
 ----
 ## User Stories
