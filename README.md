@@ -13,6 +13,9 @@ see [Holiday Wishlist](http://holidaywishlist.herokuapp.com/)
 3. PostgresSQL
 4. Devise for authentication
 5. Masonry.js for a JS grid layout
+6. Etsy API Integration
+7. Faker and Factory girl to seed data
+8. RSPEC for some unit testing
 
 ----
 ## User Stories
