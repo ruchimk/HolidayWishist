@@ -2,7 +2,7 @@
 
 ----
 ## About
-see [Holiday Wishlist](http://glacial-depths-5935.herokuapp.com/)
+see [Holiday Wishlist](http://holidaywishlist.herokuapp.com/)
 
 > Holiday Wishlist is a Ruby on Rails web application that makes it easy to share your favorite items with your friends--making secret santa so much easier! No more stressing about what to get your loved ones--with holiday wishlist, you can share your wishes and make wishes come true :)!  
 
@@ -12,19 +12,15 @@ see [Holiday Wishlist](http://glacial-depths-5935.herokuapp.com/)
 2. Rails 4.1.1
 3. PostgresSQL
 4. Devise for authentication
-5. Masonry.js for a nice grid layout
+5. Masonry.js for a JS grid layout
 
 ----
 ## User Stories
-# Website
-
 * User can login via Devise authentication
 * User can manually add an item using title, description, image url, and webpage URL, private
 * User can see all their items (collection of items) in a single page
 * User can see snowfall
 * User can edit and delete items 
-
-
 
 ----
 ## Future Goals
