@@ -16,6 +16,7 @@
 //= require underscore
 //= require backbone
 //= require masonry/jquery.masonry
+//= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
 

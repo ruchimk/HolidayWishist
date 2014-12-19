@@ -19,16 +19,4 @@ class SearchesController < ApplicationController
     @found_products = response['results']
   end
 
-
-  def create
-    render 'new_item_path'
-    # @search = current_user.searches.build(search_params) #auto assigns this to the user
-    # if @search.save
-    #   redirect_to :back, notice: "Item added."
-    # else
-    #   redirect_to :back, alert: "Failed to save."
-    # end
-  end
-
-
 end
