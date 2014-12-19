@@ -18,6 +18,10 @@
  @import "bootstrap";
  @import url(http://fonts.googleapis.com/css?family=Croissant+One);
 
+ *{
+  box-sizing: border-box;
+ }
+
 
  html, body {
   margin: 0;
