@@ -17,9 +17,28 @@
 //= require backbone
 //= require masonry/jquery.masonry
 //= require bootstrap-sprockets
-//= require turbolinks
 //= require_tree .
 
+
+// $ ->
+//   $('#items').imagesLoaded ->
+//     $('#items').masonry
+//       itemSelector: '.box'
+//       isFitWidth: true
+
+
+
+// var msnry = new Masonry( "#container", {
+//   // options
+//   columnWidth: 60,
+//   isFitWidth: true,
+//   itemSelector: '.item'
+// });
+
+// $(".item").click(function(){
+//    window.open($(this).find("a").attr("href"));
+//    return false;
+// });
 
 // snowflake animation from:http://sutherlandboswell.com/2012/11/creating-pretty-snow-with-javascript-html-css/
 var ready = function() {
@@ -57,7 +76,7 @@ function getRandom(min, max) {
 
 var width = getWidth();
 var height = getHeight();
-var flakeCount = 40;
+var flakeCount = 100;
 var gravity = 0.8;
 var windSpeed = 20;
 var flakes = [];

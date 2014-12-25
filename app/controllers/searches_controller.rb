@@ -14,7 +14,7 @@ class SearchesController < ApplicationController
   def index
     category_id = params['category_id']
     url = "https://openapi.etsy.com/v2/listings/active?api_key=mi7mse8bmftparcsqwsyassi"
-
+    # url = "https://openapi.etsy.com/v2/taxonomy/categories?/#{category_id}/listings/active?method=GET&api_key=mi7mse8bmftparcsqwsyassi&fields=title,url&limit=100&includes=MainImage"
     response = HTTParty.get(url)
     @found_products = response['results']
   end

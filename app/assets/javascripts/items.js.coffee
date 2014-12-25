@@ -10,3 +10,14 @@ $ ->
 
 
 
+# var msnry = new Masonry( "#container", {
+#   // options
+#   columnWidth: 60,
+#   isFitWidth: true,
+#   itemSelector: '.item'
+# });
+
+# $(".item").click(function(){
+#    window.open($(this).find("a").attr("href"));
+#    return false;
+# });

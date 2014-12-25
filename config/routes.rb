@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :items
   resources :users, only: [:show]
   root to: "items#index"
-  # root to: "home#index"
+ # root to: "home#index"
 
   resources :friendships
 

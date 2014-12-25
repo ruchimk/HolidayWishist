@@ -15,13 +15,17 @@
                    Submitted by: <%= @item.user.email %>
                 </p>
             </div>
+
             <div class="col-md-6">
                   <div class="btn-group pull-right">
+                    <% if user_signed_in? %>
                     <p class="btn btn-default"><%= link_to 'Edit', edit_item_path(@item) %></p>
                     <p class="btn btn-default"><%= link_to 'Back', items_path %></p>
                     <p class="btn btn-default"><%= link_to 'Delete', item_path, method: :delete, data: {confirm: "Are you sure?"} %></p>
+                    <% end %>
                   </div>
               </div>
+
           </div>
         </div>
       </div>
