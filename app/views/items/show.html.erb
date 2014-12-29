@@ -1,7 +1,7 @@
 <div id="item_show" class="row">
   <div class="col-md-8 md-offset-2">
     <div class="panel panel-default">
-      <div class="panel-heading pin_image">
+      <div class="panel-heading item_image">
         <%= image_tag @item.image_url %>
       </div>
       <div class="panel-body">
@@ -12,20 +12,19 @@
         <div class="row">
             <div class="col-md-6">
                 <p class="user">
-                   Submitted by: <%= @item.user.email %>
+                   Submitted by: <%= @item.user.name %>
                 </p>
             </div>
 
             <div class="col-md-6">
                   <div class="btn-group pull-right">
-                    <% if user_signed_in? %>
+                    <% if @item.user.name == current_user.name %>
                     <p class="btn btn-default"><%= link_to 'Edit', edit_item_path(@item) %></p>
                     <p class="btn btn-default"><%= link_to 'Back', items_path %></p>
                     <p class="btn btn-default"><%= link_to 'Delete', item_path, method: :delete, data: {confirm: "Are you sure?"} %></p>
                     <% end %>
                   </div>
               </div>
-
           </div>
         </div>
       </div>
