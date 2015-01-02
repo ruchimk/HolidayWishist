@@ -3,21 +3,22 @@
       <div class="col-md-10 center">
         <table class="table table-striped table-bordered">
           <thead class="text-center">
+            <th>Image</th>
            <th>Title</th>
-            <th>URL </th>
             <th>Save to Wishlist </th>
           </thead>
           <tbody>
           <% @found_products.each do |products_hash| %>
             <% item_hash = {
               title: products_hash['title'],
-              url: products_hash['url']
+              url: products_hash['url'],
+              image_url: products_hash['MainImage']['url_170x135']
              }
             %>
             <tr>
-              <td><%= products_hash['title'] %></td>
-              <td><%= products_hash['url'] %></td>
-              <td><%= button_to('Save', items_path(item: item_hash))%></td>
+              <td><%= image_tag products_hash['MainImage']['url_170x135']  %></td>
+              <td><%= link_to products_hash['title'], products_hash['url'], target: "_blank" %></td>
+              <td><%= button_to('Save', items_path(item: item_hash), class: "btn btn-primary")%></td>
             </tr>
           <% end %>
           </tbody>

@@ -54,12 +54,12 @@ var ready = function() {
         x = document.body.clientWidth;
     }
     return x;
-}
+  }
 
-function getHeight() {
+  function getHeight() {
     var y = 0;
-    if (self.innerHeight) {
-        y = self.innerHeight;
+    if ($('#snowglobe').height()) {
+        y = $('#snowglobe').height();
     }
     else if (document.documentElement && document.documentElement.clientHeight) {
         y = document.documentElement.clientHeight;
@@ -68,23 +68,23 @@ function getHeight() {
         y = document.body.clientHeight;
     }
     return y;
-}
+  }
 
-function getRandom(min, max) {
+  function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+  }
 
-var width = getWidth();
-var height = getHeight();
-var flakeCount = 100;
-var gravity = 0.8;
-var windSpeed = 20;
-var flakes = [];
+  var width = getWidth();
+  var height = getHeight();
+  var flakeCount = 100;
+  var gravity = 0.8;
+  var windSpeed = 20;
+  var flakes = [];
 
-var currentFlake = 0;
-var snowglobe = document.getElementById("snowglobe");
+  var currentFlake = 0;
+  var snowglobe = document.getElementById("snowglobe");
 
-while (currentFlake < flakeCount) {
+  while (currentFlake < flakeCount) {
     var flake = document.createElement("div");
     flake.className = 'flake';
     flake.style.fontSize = getRandom(12, 24) + 'px';
@@ -95,8 +95,9 @@ while (currentFlake < flakeCount) {
     newFlake.speed = getRandom(1, 100);
     flakes.push(newFlake);
     currentFlake++;
-}
-function doAnimation() {
+  }
+
+  function doAnimation() {
     for (var i = 0; i < flakes.length; i++) {
         newX = false;
         newY = false;
@@ -115,14 +116,14 @@ function doAnimation() {
         flakes[i].style.top = newY + 'px';
         flakes[i].style.left = newX + 'px';
     }
-}
+  }
 
 //function to run every 10 milliseconds
-setInterval(doAnimation, 10);
+  setInterval(doAnimation, 10);
 
 //account for the user changing the browser's size
 //new width/height can be set to calculate possible snowflake positions
-window.onresize = function(event) {
+  window.onresize = function(event) {
     width = getWidth();
     height = getHeight();
   }

@@ -25,7 +25,7 @@ class ItemsController < ApplicationController
     @item = current_user.items.build(item_params)
 
     if @item.save
-      render json: @item.to_json
+      redirect_to root_path
     else
       render json: @item.errors, status: :unprocessable_entity
     end

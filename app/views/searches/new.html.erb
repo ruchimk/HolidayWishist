@@ -6,9 +6,9 @@
   <h2>Browse Etsy Products</h2>
   <%= form_tag searches_path, method: :get do  %>
     <div class="field">
-      <select name="category_id" id="category">
+      <select name="name" id="category">
       <% @cat_list.each do |category| %>
-        <option value= "<%= category['category_id'] %>"><%= category[
+        <option value= "<%= category['name'] %>"><%= category[
           'meta_title'] %></option>
           <% end %>
      </select>
