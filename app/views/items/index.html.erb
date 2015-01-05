@@ -6,10 +6,9 @@
 <div id="items" class=“transitions-enabled”>
   <% @items.each do |item| %>
   <div class="box panel panel-default">
-    <h2><%= image_tag item.image_url %></h2>
+    <div class="image"><%= link_to image_tag(item.image_url), item %></div>
     <div class="panel-body">
-      <h2><%= link_to item.title, item %></h2>
-      <p class="user">Submitted by: <%= item.user.name %> </p>
+      <div class="overlay"><a href="<%= item.url %>" target=_blank><%= item.title %></a></div>
     </div>
   </div>
   <% end %>
