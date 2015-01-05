@@ -25,14 +25,12 @@
  /* centered columns styles */
 .row-centered {
     text-align:center;
-}
+    padding: 10px 20px 20px 50px;
+  }
 .col-centered {
     display:inline-block;
     float:none;
-    /* reset the text-align */
-    text-align:left;
-    /* inline-block space fix */
-    margin-right:-4px;
+    text-align:center;
 }
 
 
@@ -123,12 +121,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
     font-weight: 100;
   }
 
+
+
   #items {
     margin: 0 auto;
     width: 100%;
 
     .box {
-      margin: 10px;
+      margin: 35px;
       width: 200px;
       box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
       border-radius: 7px;
@@ -136,7 +136,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
       border: 3px red solid;
       border-radius: 5px;
       display: inline-block;
-      padding: 3px;
+      padding: 10px;
+
       img {
         max-width: 100%;
         height: auto;
@@ -149,18 +150,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
           color: #474747;
         }
       }
-      .user {
-        font-size: 12px;
-        border-top: 1px solid #EAEAEA;
-        padding: 15px;
-        margin: 0;
-      }
-    }
-  }
 
-  .box:hover span.text-content {
-    opacity: 1;
+    .image .title{
+      display:none;
+    }
+
+    .image:hover .title{
+      display: block;
+    }
+
   }
+}
+
 
   #edit_page {
     .current_image {
