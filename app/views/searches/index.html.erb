@@ -16,7 +16,7 @@
              }
             %>
             <tr>
-              <td><%= image_tag products_hash['MainImage']['url_170x135']  %></td>
+              <td><% if products_hash['MainImage'] %><%= image_tag products_hash['MainImage']['url_170x135']  %><% end %></td>
               <td><%= link_to products_hash['title'], products_hash['url'], target: "_blank" %></td>
               <td><%= button_to('Save', items_path(item: item_hash), class: "btn btn-primary")%></td>
             </tr>

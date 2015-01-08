@@ -28,9 +28,9 @@
     padding: 10px 20px 20px 50px;
   }
 .col-centered {
-    display:inline-block;
     float:none;
     text-align:center;
+    margin: 0 auto;
 }
 
 
@@ -84,7 +84,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
   font-weight: bold;
 }
 
-.devise_forms, .addfriend, .myfriends, .newetsysearch {
+.devise_forms, .myfriends, .newetsysearch {
   border-radius: 300px 300px 300px 300px;
   -moz-border-radius: 300px 300px 300px 300px;
   -webkit-border-radius: 300px 300px 300px 300px;
@@ -93,7 +93,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
   background: red;
   margin-left: auto;
   margin-right: auto;
-
   border: 3px solid #e61e1e;
   background-color: white;
   text-align: center;
@@ -119,6 +118,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: 100;
+  }
+
+  .showfriends, .addfriend{
+     border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 4px solid #fc0000;
+    background-color: white;
+    text-align: center;
+    margin: 5px;
+
   }
 
 
