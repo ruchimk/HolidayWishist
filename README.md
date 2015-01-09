@@ -23,20 +23,18 @@ see [Holiday Wishlist](http://holidaywishlist.herokuapp.com/)
 * User can login via Devise authentication
 * User can manually add an item using title, description, image url, and webpage URL, private
 * User can see all their items (collection of items) in a single page
+* User can search for Etsy items by categories and save the item to their favorites
 * User can see snowfall
 * User can edit and delete items 
-* User can search for items by categories and save the item to their favorites
 
 ----
 ## Future Goals
 * Incorporate We-Pay API so you can purchase your friends gifts right from the app
 * Incorporate Backbone to make single page app using test driven development
 * Allow friends to make lists to play secret santa with and it will assign a secret santa to you.
-* Add more tests 
-* Add svg animation for christmas tree 
-* Add items in a grid layout and customize the grid layout--with skeleton or just bootstrap?
+* Add more tests--Jasmine Testing for Backbone.
 
 
 ----
 ## Thanks
-* I would like to thank my friends and our secret santa ritual for being the inspiration behind this app. I would also like to thank my instructors at DC's WDI-3 for all their support and encouragement.
+I would like to thank my friends and our secret santa ritual for being the inspiration behind this app. I would also like to thank my instructors at DC's WDI-3 for all their support and encouragement.
