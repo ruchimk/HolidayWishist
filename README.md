@@ -2,7 +2,9 @@
 
 ----
 ## About
-see [Holiday Wishlist](http://holidaywishlist.herokuapp.com/)
+
+See [Entity Relationship Diagram](http://imgur.com/9ZoygHe)
+Visit [Holiday Wishlist](http://holidaywishlist.herokuapp.com/)
 
 > Holiday Wishlist is a Ruby on Rails web application that makes it easy to share your favorite items with your friends--making secret santa so much easier! No more stressing about what to get your loved ones--with holiday wishlist, you can share your wishes and make wishes come true :)!  
 
