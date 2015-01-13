@@ -33,7 +33,6 @@
     margin: 0 auto;
 }
 
-
  html, body {
   margin: 0;
   padding: 0;
@@ -44,9 +43,11 @@ body {
   background: #a2cade;
 }
 
-h1, h2 {
+h1, h2, h4 {
   margin:0;
   text-align: center;
+  color:#df004c;
+  font-weight: bold;
 }
 
 ul {

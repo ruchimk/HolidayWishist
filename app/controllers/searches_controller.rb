@@ -11,10 +11,16 @@ class SearchesController < ApplicationController
   end
 
   def index
-    category = params['name']
-    url = "https://openapi.etsy.com/v2/private/listings/active?sort_on=created&sort_order=down&category=#{category}&api_key=mi7mse8bmftparcsqwsyassi&includes=MainImage&limit=100"
+    url = "https://openapi.etsy.com/v2/taxonomy/categories?api_key=mi7mse8bmftparcsqwsyassi"
     response = HTTParty.get(url)
-    @found_products = response['results']
+    categories = JSON.parse(response.body)
+    @cat_list = categories["results"]
+
+    category = params['name']
+    @category = category
+    listing_url = "https://openapi.etsy.com/v2/private/listings/active?sort_on=created&sort_order=down&category=#{category}&api_key=mi7mse8bmftparcsqwsyassi&includes=MainImage&limit=100"
+    listing_response = HTTParty.get(listing_url)
+    @found_products = listing_response['results']
   end
 
 end
